@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/graph_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.ronaldiputra.coronainformasi.fragments.HomeFragment"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_detailFragment"
+            app:destination="@id/detailFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/informasiFragment"
+        android:name="com.ronaldiputra.coronainformasi.fragments.InformasiFragment"
+        android:label="@string/informasi"
+        tools:layout="@layout/fragment_informasi" />
+    <fragment
+        android:id="@+id/bantuanFragment"
+        android:name="com.ronaldiputra.coronainformasi.fragments.BantuanFragment"
+        android:label="@string/Bantuan"
+        tools:layout="@layout/fragment_bantuan" />
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="com.ronaldiputra.coronainformasi.fragments.InfoFragment"
+        android:label="@string/info"
+        tools:layout="@layout/fragment_info" />
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.ronaldiputra.coronainformasi.fragments.DetailFragment"
+        android:label="Detail"
+        tools:layout="@layout/fragment_detail">
+        <action
+            android:id="@+id/action_detailFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>
